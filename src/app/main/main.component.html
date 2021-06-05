@@ -1,1 +1,45 @@
-<p>main works!</p>
+<div class="header">
+    <mat-toolbar color="primary" >
+        <button mat-button [routerLink]="['/main/users']">
+           <mat-icon>directions_subway</mat-icon> Usuarios
+        </button>
+        
+        <button mat-button [routerLink]="['/main/sectores']">
+          <mat-icon>directions_bus</mat-icon> Sectores
+        </button>
+        
+        <span class="example-spacer"></span>
+    
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>search</mat-icon>
+            <span>Procurar</span>
+          </button>
+          <button mat-menu-item disabled>
+            <mat-icon>dialpad</mat-icon>
+            <span>Açao</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Alerta</span>
+          </button>
+        </mat-menu>
+    </mat-toolbar>
+</div>
+<div class="content">
+    <router-outlet></router-outlet> 
+</div>
+<div style="height: 64px;"></div>
+<div class="footer">
+    <mat-toolbar color="primary" >
+        <h3>
+            © 2021 OniPao - Todos os direitos reservado
+        </h3>
+    </mat-toolbar>
+</div>
+
+
+

@@ -4,8 +4,11 @@ import { AccountComponent } from './account.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
+import { FormsModule,ReactiveFormsModule } from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http';
 
-
+import { AccountRoutingModule } from './account-routing.module'
+import { MaterialModule } from '../services/material-module'
 @NgModule({
   declarations: [
     AccountComponent,
@@ -13,7 +16,11 @@ import { RegisterComponent } from './register/register.component';
     RegisterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AccountRoutingModule,
+    MaterialModule,
+    FormsModule,ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class AccountModule { }
