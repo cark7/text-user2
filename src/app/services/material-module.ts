@@ -13,10 +13,10 @@ import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 // import {MatCardModule} from '@angular/material/card';
-// import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 // import {MatChipsModule} from '@angular/material/chips';
 // import {MatStepperModule} from '@angular/material/stepper';
-// import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 // import {MatDialogModule} from '@angular/material/dialog';
 // import {MatDividerModule} from '@angular/material/divider';
 // import {MatExpansionModule} from '@angular/material/expansion';
@@ -31,10 +31,10 @@ import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 // import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 // import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
-// import {MatSidenavModule} from '@angular/material/sidenav';
-// import {MatSliderModule} from '@angular/material/slider';
-// import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-// import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 // import {MatSortModule} from '@angular/material/sort';
 // import {MatTableModule} from '@angular/material/table';
 // import {MatTabsModule} from '@angular/material/tabs';
@@ -56,10 +56,10 @@ import {OverlayModule} from '@angular/cdk/overlay';
     MatButtonModule,
     MatButtonToggleModule,
     // MatCardModule,
-    // MatCheckboxModule,
+    MatCheckboxModule,
     // MatChipsModule,
     // MatStepperModule,
-    // MatDatepickerModule,
+    MatDatepickerModule,
     // MatDialogModule,
     // MatDividerModule,
     // MatExpansionModule,
@@ -75,10 +75,10 @@ import {OverlayModule} from '@angular/cdk/overlay';
     // MatRadioModule,
     MatRippleModule,
     MatSelectModule,
-    // MatSidenavModule,
-    // MatSliderModule,
-    // MatSlideToggleModule,
-    // MatSnackBarModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
     // MatSortModule,
     // MatTableModule,
     // MatTabsModule,

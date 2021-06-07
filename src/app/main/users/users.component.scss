@@ -1,0 +1,106 @@
+.content{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 20px;
+    padding: 10px;
+    margin: 0 auto;
+        .filter{
+            background-color: #3f51b52e;
+            border-radius: 5px;
+            padding: 0px 5px;
+            //height: 80%;
+            .list-filter{
+                overflow: auto;
+               // max-height: 80%;
+            }
+        }
+        .details{
+            background-color: #3f51b505;
+            border-radius: 5px;
+            padding: 0px 5px;
+        }
+}
+.avatar{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    //padding-top: 5px;
+    width: 100%;
+    .circulo{
+        display: flex;
+        justify-content: center;
+        background: #3f51b5;
+        height: 96px;
+        width: 96px;
+        font-size: 48px;
+        text-transform: capitalize;
+        border-radius: 50%;
+        color: white;
+        line-height: 1.77;
+        mat-icon{
+            font-size: 64px;
+            text-align: center;
+            width: auto;
+            height: 100%;
+            line-height: 1.47;
+        }
+    }
+}
+.header{ 
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr;
+    grid-gap: 10px;
+    border: solid 1px #8796dc78;
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.14), 0 1px 14px 0 rgba(0, 0, 0, 0.12);
+    padding: 10px;
+    .data{
+        text-transform: uppercase;
+    
+        h3, h4, p{
+            margin: 0px;
+        }
+        strong{
+            color: #3f51b5;
+        }
+    }
+}
+.detail{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-gap: 20px;
+    width: 100%;
+    margin-top: 15px;
+}
+.card-sector{
+    display: grid;
+    grid-template-columns: 96px 1fr ;
+    grid-gap: 10px;
+    border-radius: 4px;
+    padding: 10px 5px;
+    border: solid 1px #8796dc78;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),0 5px 8px 0 rgba(0,0,0,.14),0 1px 14px 0 rgba(0,0,0,.12);
+    .card-info{
+       label{
+            color: #3f51b5;
+       }
+       h3{
+        margin: 0px; 
+       }
+    }
+}
+.select-sector{
+    margin-top: -12px;
+    margin-bottom: 10px;
+}
+
+.text-nodevorda{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+h2,h2,h3, h4, p{
+    margin: 0px;
+}
+
+// max-height: calc(100vh - 48px);

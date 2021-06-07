@@ -1,1 +1,23 @@
-<p>sector works!</p>
+<div class="content">
+    <aside class="filter">
+        <mat-form-field class="search" style="margin-top:10px">
+            <input matInput (keyup)="applyFilter($event,$event.target.value)" placeholder="Filter">
+        </mat-form-field>
+        <mat-form-field appearance="fill" style="width: 190px;">
+            <mat-label>selecione o usuário</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let sector of listSector; index as i" value="one">{{sector.nome}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="list-filter">
+            <mat-selection-list #shoes [multiple]="false" >
+                <mat-list-option *ngFor="let item of listSector" [value]="item.nome">
+                  {{item.nome}}
+                </mat-list-option>
+            </mat-selection-list> 
+        </div>
+    </aside>
+    <div class="details">
+        
+    </div>
+</div>
