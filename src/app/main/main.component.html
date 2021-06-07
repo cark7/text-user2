@@ -1,11 +1,14 @@
 <div class="header">
     <mat-toolbar color="primary" >
         <button mat-button [routerLink]="['/main/users']">
-           <mat-icon>directions_subway</mat-icon> Usuarios
+           <mat-icon>people</mat-icon> Usuarios
         </button>
         
         <button mat-button [routerLink]="['/main/sectores']">
-          <mat-icon>directions_bus</mat-icon> Sectores
+          <mat-icon>apartment</mat-icon> Sectores
+        </button>
+        <button mat-button [routerLink]="['/main/myinfo']">
+          <mat-icon>fact_check</mat-icon> Minha Informação
         </button>
         
         <span class="example-spacer"></span>
@@ -22,9 +25,9 @@
             <mat-icon>dialpad</mat-icon>
             <span>Açao</span>
           </button>
-          <button mat-menu-item>
-            <mat-icon>notifications_off</mat-icon>
-            <span>Alerta</span>
+          <button mat-menu-item (click)="exit()">
+            <mat-icon>logout</mat-icon>
+            <span>Sair</span>
           </button>
         </mat-menu>
     </mat-toolbar>

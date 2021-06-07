@@ -10,12 +10,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { MainRoutingModule } from './main.routing'
 import { MaterialModule } from '../services/material-module' 
 
-import { ServicesService } from '../services/services.service'
+import { ServicesService } from '../services/services.service';
+import { MyinformationComponent } from './myinformation/myinformation.component'
 @NgModule({
   declarations: [
     MainComponent,
     SectorComponent,
-    UsersComponent
+    UsersComponent,
+    MyinformationComponent
   ],
   imports: [
     CommonModule,

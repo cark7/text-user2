@@ -7,7 +7,7 @@ import {
   MatSnackBarHorizontalPosition,
   MatSnackBarVerticalPosition,
 } from '@angular/material/snack-bar';
-import { SectorComponent } from '../sector/sector.component';
+
 
 
 @Component({

@@ -103,4 +103,30 @@ h2,h2,h3, h4, p{
     margin: 0px;
 }
 
+@media (max-width: 985px) {
+    .detail{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        width: 100%;
+    }
+}
+@media (max-width: 780px) {
+    .detail{
+        display: grid;
+        grid-template-columns: 1fr;
+        //grid-gap: 10px;
+        width: 100%;
+    }
+    .header{ 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        padding: 10px;
+        .avatar{
+            display: none;
+        }
+    }
+}
+
 // max-height: calc(100vh - 48px);

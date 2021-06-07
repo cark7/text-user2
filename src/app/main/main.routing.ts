@@ -6,7 +6,7 @@ import { MainComponent } from "./main.component";
 
 import { SectorComponent } from "./sector/sector.component"
 import { UsersComponent } from "./users/users.component"
-
+import { MyinformationComponent } from "./myinformation/myinformation.component"
 
 
 const routes: Routes = [
@@ -18,6 +18,7 @@ const routes: Routes = [
     { path: '', redirectTo: 'users', pathMatch: 'full' },
     { path: 'sectores',      component: SectorComponent },
     { path: 'users',         component: UsersComponent  },
+    { path: 'myinfo',         component: MyinformationComponent  },
 
     ]
   },
