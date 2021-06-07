@@ -5,14 +5,16 @@
         </button>
         
         <button mat-button [routerLink]="['/main/sectores']">
-          <mat-icon>apartment</mat-icon> Sectores
+          <mat-icon>apartment</mat-icon> Setores
         </button>
         <button mat-button [routerLink]="['/main/myinfo']">
           <mat-icon>fact_check</mat-icon> Minha Informação
         </button>
         
         <span class="example-spacer"></span>
-    
+        <div class="ben-vindo">
+          Ben-Vindo, {{nameUser}}
+        </div>
         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
           <mat-icon>account_circle</mat-icon>
         </button>
@@ -38,9 +40,18 @@
 <div style="height: 64px;"></div>
 <div class="footer">
     <mat-toolbar color="primary" >
-        <h3>
-            © 2021 OniPao - Todos os direitos reservado
-        </h3>
+        <div style="display: flex;">
+          <img src="../assets/img/logo.png" alt="" srcset="" class="logo">
+          <div style="margin-left: 10px; line-height: 2;"> Software Manage</div>
+        </div>
+        <div>
+          <img src="../assets/img/WhatsApp.png" alt="" srcset="" class="img-redes-soc">
+          <img src="../assets/img/facebook.png" alt="" srcset="" class="img-redes-soc">
+          <img src="../assets/img/instagram.png" alt="" srcset="" class="img-redes-soc">
+        </div>
+        <div style="font-size: 12px;">
+          Todos os Direitos Reservados ©2010-2021.
+        </div>
     </mat-toolbar>
 </div>
 

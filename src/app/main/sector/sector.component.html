@@ -12,7 +12,7 @@
         <div class="list-filter">
             <mat-selection-list #shoes [multiple]="false">
                 <mat-list-option *ngFor="let item of listSetores; index as i" [value]="item.nome"
-                    (click)="actDetails(item.id, i)">
+                    (click)="actDetails(item.id, i)" class="list-item">
                     {{item.nome}}
                 </mat-list-option>
             </mat-selection-list>

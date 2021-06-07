@@ -1,6 +1,9 @@
 .example-spacer {
     flex: 1 1 auto;
 }
+.ben-vindo{
+    text-transform: uppercase;
+}
 .footer{
     display: flex;
     flex-flow: row wrap;
@@ -14,7 +17,23 @@
     //background-color: #673ab7;
     color: #fff;
     mat-toolbar{
-        justify-content: center;
+        justify-content:space-between;
+        display: flex;
+
     }
     
+}
+.logo{
+   width: 40px;
+    height: 40px; 
+}
+.img-redes-soc{
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    border: solid 1px #ffffff78;
+    box-shadow: 0 3px 5px -1px rgba(255, 255, 255, 0.2),0 5px 8px 0 rgba(255, 243, 243, 0.14),0 1px 14px 0 rgba(255, 219, 219, 0.12);
+    border-radius: 20px;
+    padding: 1px;
+    background: #6e84ff;
 }

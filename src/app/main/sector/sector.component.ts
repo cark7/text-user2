@@ -108,7 +108,8 @@ export class SectorComponent implements OnInit {
     return isreapet
   }
   vincular(){
-    let id_user = this.listSetores[this.indexSetorSelected].id, id_setor = this.userSelected.id
+    let id_setor = this.listSetores[this.indexSetorSelected].id, id_user = this.userSelected.id
+    console.log('user: ',id_user, 'sector',id_setor)
     let isreapet: Boolean
     isreapet = this.validRepetition(this.userSelected,this.listSetores[this.indexSetorSelected] )
     if (isreapet) {

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
@@ -14,6 +15,7 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private router:Router,
     private http: HttpClient,
+    private _snackBar: MatSnackBar
   ) { 
     this.loginForm = this.formBuilder.group({
       user: ['', Validators.required],
@@ -36,19 +38,15 @@ export class LoginComponent implements OnInit {
         console.log('token', res.token);
         console.log('email', res.user.email);
         
-          this.saveLocal(res.token, res.user.email, res.user.id);
+          this.saveLocal(res.token, res.user.email, res.user.id, res.user.name);
           this.router.navigate(['/main/users']);
         
           
         
       },
       error=>{
-        //console.log('erroorr: ',error)
-        //this.b_mensaje = true;
-          //this.mensaje = 'Datos Incorrectos!!';
-          console.log("Some error occured")
-        //this.b_mensaje = true;
-        //this.mensaje = this.constantes.error_servidor;
+        console.log("Some error occured")
+        this.openSnackBar('informação não corresponde')
       }
     ) 
   }
@@ -74,10 +72,18 @@ export class LoginComponent implements OnInit {
 
     return response;
   }
-  saveLocal(token: any,  email, idUser){
+  saveLocal(token: any,  email, idUser, name){
     localStorage.setItem('token', token);
     localStorage.setItem('user', email);
     localStorage.setItem('id_user', idUser);
+    localStorage.setItem('name', name);
+  }
+
+  openSnackBar(message: string) {
+    this._snackBar.open(message, ' ok ', {
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
+    });
   }
 
 }

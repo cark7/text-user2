@@ -27,10 +27,30 @@
                     <input matInput 
                             formControlName="pass" 
                             type="password"
-                            name="password" required>
+                            name="password"
+                            (focusout)="onBlur()"
+                            required>
                 </mat-form-field>
             </div>
-            <button mat-raised-button color="primary" type="submit">Cadastrar</button>
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Confirmar Senha</mat-label>
+                    <input matInput 
+                            formControlName="confpass" 
+                            type="password"
+                            name="confpass" 
+                            (focusout)="onBlur()"
+                            required>
+                </mat-form-field>
+            </div>
+            <div style="display: none;">
+                <input type="checkbox" name="" id="" formControlName="passConfir">
+            </div>
+            <div style="display: flex; justify-content: center">
+                <a mat-stroked-button [routerLink]="['/account/login']" >Login</a>
+                <button mat-raised-button color="primary" type="submit" class="btn-submit" [disabled]="registerForm.invalid">Cadastrar Se</button>
+            </div>
+            
         </div>
     </form>
 </div>

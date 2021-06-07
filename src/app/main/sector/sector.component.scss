@@ -103,6 +103,11 @@ h2,h2,h3, h4, p{
     margin: 0px;
 }
 
+
+.list-item{
+    margin-top: 10px;
+    height: 60px;
+}
 @media (max-width: 985px) {
     .detail{
         display: grid;

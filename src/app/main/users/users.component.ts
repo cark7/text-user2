@@ -111,7 +111,7 @@ export class UsersComponent implements OnInit {
     console.log('lista1: ', this.listUsers)
     if (this.filter_numSet > 0) {
       this.listUsers = this.listUsers.filter(e => {
-        return e.setores.length > this.filter_numSet
+        return e.setores.length >= this.filter_numSet
       })
     }
     console.log('lista2: ', this.listUsers)

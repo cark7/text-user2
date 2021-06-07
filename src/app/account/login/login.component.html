@@ -1,4 +1,4 @@
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form">
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <h2> Faça o Login </h2>
     <div class="form-content">
         <div>
@@ -21,7 +21,7 @@
             </mat-form-field>
         </div>
         
-        <a mat-stroked-button [routerLink]="['/account/cadastro']" >cadastrar se</a>
-        <button mat-raised-button color="primary" type="submit"> Login </button>
+        <a mat-stroked-button [routerLink]="['/account/register']" >Cadastrar Se</a>
+        <button mat-raised-button color="primary" type="submit" class="btn-submit"> Login </button>
     </div>
 </form>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -10,16 +11,20 @@ import { HttpClient } from '@angular/common/http';
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   apiLink = "http://home.drauber.info:3333/";
+  email = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+  passConfir: boolean = false
   constructor(
     private formBuilder: FormBuilder,
     private router:Router,
     private http: HttpClient,
+    private _snackBar: MatSnackBar
   ) { 
     this.registerForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      email: ['', Validators.required],
-      pass: ['', Validators.required],
-       
+      name: ['',[Validators.required, Validators.minLength(4)]],
+      email: ['',  [Validators.required, Validators.pattern(this.email)]],
+      pass: ['', [Validators.required,Validators.minLength(6)]],
+      confpass: ['', Validators.required], 
+      passConfir: [false, Validators.requiredTrue], 
     });
   }
 
@@ -35,12 +40,9 @@ export class RegisterComponent implements OnInit {
         this.router.navigate(['/account/login']);
       },
       error=>{
-        //console.log('erroorr: ',error)
-        //this.b_mensaje = true;
-        //this.mensaje = 'Datos Incorrectos!!';
-          console.log("Some error occured")
-        //this.b_mensaje = true;
-        //this.mensaje = this.constantes.error_servidor;
+        this.openSnackBar('Algo deu errado')
+        console.log("Some error occured")
+        
       }
     ) 
   }
@@ -66,6 +68,29 @@ export class RegisterComponent implements OnInit {
     }
 
     return response;
+  }
+
+  onBlur(){
+    if (this.registerForm.value.confpass != '') {
+      
+    
+      if (this.registerForm.value.pass == this.registerForm.value.confpass) {
+      console.log('confirmada clave');
+      //this.registerForm.setValue['passConfir'] = true
+      this.registerForm.controls['passConfir'].setValue(true);
+      } else {
+        this.registerForm.controls['passConfir'].setValue(false);
+      this.openSnackBar('As Senhas não coincidem')
+      }
+    }
+    
+  }
+
+  openSnackBar(message: string) {
+    this._snackBar.open(message, ' ok ', {
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
+    });
   }
 
 }

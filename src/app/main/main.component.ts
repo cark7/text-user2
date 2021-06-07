@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class MainComponent implements OnInit {
 
+  nameUser = localStorage.getItem('name')
+
   constructor(
     private router: Router
   ) { }
