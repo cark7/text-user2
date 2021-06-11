@@ -45,7 +45,8 @@
         <div class="header" *ngIf="showDetails">
             <div class="avatar">
                 <div class="circulo">
-                    {{listUsers[indexUserSelected].name[0]}}{{listUsers[indexUserSelected].name[1]}}
+                    <img [src]="listUsers[indexUserSelected].avatar_url" alt="" class="img-avatar">
+                    <!-- {{listUsers[indexUserSelected].name[0]}}{{listUsers[indexUserSelected].name[1]}} -->
                 </div>
             </div>
             <div class="data">
